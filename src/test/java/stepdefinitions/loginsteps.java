@@ -12,6 +12,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
+import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class loginsteps {
 
@@ -20,10 +21,9 @@ public class loginsteps {
 
         @Given("I am on the login page")
         public void iAmOnLoginPage() {
-            // Implementation code to navigate to the login page
-            System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
-            // Create a new instance of ChromeDriver
-            driver = new ChromeDriver();
+           // Launch ChromeDriver using WebDriverManager
+            WebDriverManager.chromedriver().browserVersion("114.0.5735.91").setup();
+            WebDriver driver = new ChromeDriver();  
             driver.manage().window().maximize();
             driver.get("https://edockets.qa.alncorp.com/");
             // Wait for submit button to be clickable

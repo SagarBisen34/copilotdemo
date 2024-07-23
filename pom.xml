@@ -292,6 +292,13 @@
     <version>1.2.11</version> <!-- Use the latest version -->
 </dependency>
 
+<dependency>
+    <groupId>io.github.bonigarcia</groupId>
+    <artifactId>webdrivermanager</artifactId>
+    <version>5.9.1</version> <!-- Check for the latest version -->
+</dependency>
+
+
 </dependencies>
 
 </project>

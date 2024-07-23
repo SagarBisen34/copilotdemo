@@ -4,16 +4,20 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
+
 public class Browser {
     public static void main(String[] args) {
-        // Set the path to the ChromeDriver executable
-        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
-        // Create a new instance of the ChromeDriver
+
+        // Launch ChromeDriver using WebDriverManager
+        WebDriverManager.chromedriver().browserVersion("114.0.5735.91").setup();
         WebDriver driver = new ChromeDriver();
+
         driver.get("https://edockets.qa.alncorp.com");
 
         login(driver);
         clickButton(driver);
+        driver.quit();
     }
 
     private static void login(WebDriver driver) {
