@@ -21,7 +21,7 @@ public class loginsteps {
         @Given("I am on the login page")
         public void iAmOnLoginPage() {
             // Implementation code to navigate to the login page
-            System.setProperty("webdriver.chrome.driver", "D:\\AI-CopilotDemo\\aicopilotdemo\\drivers\\chromedriver.exe");
+            System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
             // Create a new instance of ChromeDriver
             driver = new ChromeDriver();
             driver.manage().window().maximize();
