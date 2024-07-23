@@ -6,6 +6,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -23,6 +24,10 @@ public class loginsteps {
         public void iAmOnLoginPage() {
            // Launch ChromeDriver using WebDriverManager
             WebDriverManager.chromedriver().browserVersion("114.0.5735.91").setup();
+            ChromeOptions options = new ChromeOptions();
+            options.addArguments("--no-sandbox");
+            options.addArguments("--disable-dev-shm-usage");
+            options.addArguments("--headless"); 
             WebDriver driver = new ChromeDriver();  
             driver.manage().window().maximize();
             driver.get("https://edockets.qa.alncorp.com/");

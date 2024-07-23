@@ -3,6 +3,7 @@ package stepdefinitions;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -11,6 +12,10 @@ public class Browser {
 
         // Launch ChromeDriver using WebDriverManager
         WebDriverManager.chromedriver().browserVersion("114.0.5735.91").setup();
+        ChromeOptions options = new ChromeOptions();
+        options.addArguments("--no-sandbox");
+        options.addArguments("--disable-dev-shm-usage");
+        options.addArguments("--headless"); 
         WebDriver driver = new ChromeDriver();
 
         driver.get("https://edockets.qa.alncorp.com");
