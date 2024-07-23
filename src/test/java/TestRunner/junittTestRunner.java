@@ -7,12 +7,11 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-features = {"src/test/resources/features/login.feature"},
-        glue ={"stepdefinitions"},
+features = "src/test/resources/features",
+        glue ="stepdefinitions",
         dryRun = false,
         monochrome = true,
-        plugin = {"pretty", "html:target/cucumber.html", "json:target/cucumber.json","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"},
-        tags = "@invalidLogin" 
+        plugin = {"pretty", "html:target/cucumber.html", "json:target/cucumber.json","com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 )
 public class junittTestRunner {
 

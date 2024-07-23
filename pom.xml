@@ -52,6 +52,7 @@
 <dependency>
     <groupId>org.seleniumhq.selenium</groupId>
     <artifactId>selenium-java</artifactId>
+    <scope>test</scope>
     <version>4.14.0</version>
 </dependency>
 
@@ -59,6 +60,7 @@
 <dependency>
     <groupId>io.cucumber</groupId>
     <artifactId>cucumber-java</artifactId>
+    <scope>test</scope>
     <version>7.6.0</version>
 </dependency>
 <!-- https://mvnrepository.com/artifact/asm/asm -->
@@ -275,6 +277,19 @@
     <groupId>org.apache.pdfbox</groupId>
     <artifactId>pdfbox</artifactId>
     <version>2.0.29</version>
+</dependency>
+
+<dependency>
+    <groupId>org.slf4j</groupId>
+    <artifactId>slf4j-api</artifactId>
+    <version>1.7.36</version> <!-- Use the latest version -->
+</dependency>
+
+<!-- Logback (SLF4J implementation) -->
+<dependency>
+    <groupId>ch.qos.logback</groupId>
+    <artifactId>logback-classic</artifactId>
+    <version>1.2.11</version> <!-- Use the latest version -->
 </dependency>
 
 </dependencies>
