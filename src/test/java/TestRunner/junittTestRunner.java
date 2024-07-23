@@ -7,7 +7,7 @@ import io.cucumber.junit.CucumberOptions;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-features = {"D:/AI-CopilotDemo/aicopilotdemo/src/test/resources/features/login.feature"},
+features = {"src/test/resources/features/login.feature"},
         glue ={"stepdefinitions"},
         dryRun = false,
         monochrome = true,
