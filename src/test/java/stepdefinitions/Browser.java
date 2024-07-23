@@ -7,7 +7,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 public class Browser {
     public static void main(String[] args) {
         // Set the path to the ChromeDriver executable
-        System.setProperty("webdriver.chrome.driver", "D:\\AI-CopilotDemo\\aicopilotdemo\\drivers\\chromedriver.exe");
+        System.setProperty("webdriver.chrome.driver", "drivers/chromedriver.exe");
         // Create a new instance of the ChromeDriver
         WebDriver driver = new ChromeDriver();
         driver.get("https://edockets.qa.alncorp.com");
